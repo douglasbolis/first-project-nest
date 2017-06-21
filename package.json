@@ -4,6 +4,8 @@
   "description": "Creating first project with the Nest framework.",
   "main": "app.ts",
   "scripts": {
+    "start": "node index.js",
+    "prestart:prod": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Douglas Bolis Lima",
