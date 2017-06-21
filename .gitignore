@@ -3,3 +3,6 @@
 
 # Exclude packages npm
 node_modules
+
+# Exclude yarn lock
+yarn.lock
