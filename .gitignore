@@ -1,3 +1,5 @@
-# Exlclude logs
+# Exclude logs
 *.log
 
+# Exclude packages npm
+node_modules

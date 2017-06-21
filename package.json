@@ -1,0 +1,14 @@
+{
+  "name": "first-project-nest",
+  "version": "0.0.1",
+  "description": "Creating first project with the Nest framework.",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Douglas Bolis Lima",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2"
+  }
+}
