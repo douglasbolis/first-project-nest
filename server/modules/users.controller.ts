@@ -1,12 +1,14 @@
 import {
 	Controller, Get, Post, HttpStatus, Response, Param, Body
 } from '@nestjs/common'
+import { UsersService } from './users.service'
 
 @Controller( 'users' )
 export class UsersController {
-	constructor( private usersService: UsersController ) {}
+	constructor( private usersService: UsersService ) {}
+
 	@Get()
-	public async getAllUsers( @Response res ) {
+	public async getAllUsers( @Response() res ) {
 		const users = await this.usersService.getAllUsers()
 		return res.status( HttpStatus.OK ).json( users )
 	}
@@ -18,7 +20,7 @@ export class UsersController {
 	}
 
 	@Post()
-	public async addUser( @Response res, @Body( 'users' ) user ) {
+	public async addUser( @Response() res, @Body( 'users' ) user ) {
 		const message = await this.usersService.addUser( user )
 		return res.status( HttpStatus.CREATED ).json( message )
 	}
