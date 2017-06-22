@@ -11,12 +11,12 @@ export class UsersService {
 	private countId: number = this.users.length
 
 	public getAllUsers() {
-		return Promise.resolve(this.users)
+		return Promise.resolve( this.users )
 	}
 
 	public getUser( id: number ) {
 		const user = this.users.find( user => user.id === id )
-		if (!user) {
+		if ( !user ) {
 			throw new HttpException( "User not found", 404 )
 		}
 		return Promise.resolve( user )
@@ -24,6 +24,6 @@ export class UsersService {
 
 	public addUser( user: any ) {
 		this.users.push( Object.assign( user, { id: ++this.countId } ) )
-		return Promise.resolve()
+		return Promise.resolve( 'Usuário inserido' )
 	}
 }

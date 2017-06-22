@@ -1,3 +1,6 @@
+# Exclude .vscode files
+.vscode
+
 # Exclude logs
 *.log
 
